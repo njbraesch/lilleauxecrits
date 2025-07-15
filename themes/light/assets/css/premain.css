@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Cinzel Decorative";
+    src: url("https://db.onlinewebfonts.com/t/04c721c1465c4cbff7a6e25f87ab88ea.eot");
+    src: url("https://db.onlinewebfonts.com/t/04c721c1465c4cbff7a6e25f87ab88ea.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/04c721c1465c4cbff7a6e25f87ab88ea.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/04c721c1465c4cbff7a6e25f87ab88ea.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/04c721c1465c4cbff7a6e25f87ab88ea.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/04c721c1465c4cbff7a6e25f87ab88ea.svg#Cinzel Decorative")format("svg");
+  }
+
+@font-face {
+    font-family: "Cinzel";
+    src: url("https://db.onlinewebfonts.com/t/1fcf6e20e04d591ed9f8427322ad78ae.eot");
+    src: url("https://db.onlinewebfonts.com/t/1fcf6e20e04d591ed9f8427322ad78ae.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/1fcf6e20e04d591ed9f8427322ad78ae.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/1fcf6e20e04d591ed9f8427322ad78ae.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/1fcf6e20e04d591ed9f8427322ad78ae.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/1fcf6e20e04d591ed9f8427322ad78ae.svg#Cinzel")format("svg");
+}
+
+@font-face {
+    font-family: "Cinzel Bold";
+    src: url("https://db.onlinewebfonts.com/t/2d13d52146cd7dc1b1206d1d74fa58bc.eot");
+    src: url("https://db.onlinewebfonts.com/t/2d13d52146cd7dc1b1206d1d74fa58bc.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2d13d52146cd7dc1b1206d1d74fa58bc.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2d13d52146cd7dc1b1206d1d74fa58bc.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/2d13d52146cd7dc1b1206d1d74fa58bc.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2d13d52146cd7dc1b1206d1d74fa58bc.svg#Cinzel Bold")format("svg");
+}
+
+body {
+  color: #656F60;
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin: 1rem;
+  background-color: #FFFEFE;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative';
+}
+
+h2 {
+  font-family: 'Cinzel Bold';
+  color: #AEA550;
+  margin: 0.5em 0;
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+footer {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+}
+
+.nav-link {
+  color: #FFFEFE;
+  text-decoration: none;
+}
+
+.members-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.members-list-item > img {
+  height: 300px;
+  width: 190px;
+}
+
+#hamburgerMenu {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: none;
+}
+
+#hamburgerMenu:focus, #hamburgerMenu:hover {
+  background-color: #aea550;
+  border: 2px solid #656F60 ;
+}
+
+.navButton {
+  position: relative;
+}
+
+.verticalNavList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 10rem;
+  z-index: 1;
+  
+}
+
+#verticalNav {
+  background-color: #656F60;
+  border-radius: 1em;
+  transition: opacity 0.5s, display 0.5s allow-discrete;
+}
+
+.showVerticalNav {
+  display: block;
+  opacity: 1;
+}
+
+.hideVerticalNav {
+  display: none;
+  opacity: 0;
+}
+
+#verticalNav ul {
+  width:100%;
+}
+
+.verticalNavList li {
+  padding: 1rem;
+  border-radius: 1em;
+  transition: background-color 0.5s;
+}
+
+.verticalNavListFocused, .verticalNavList li:hover {
+  background-color: #aea550;
+}
+
+@starting-style {
+  .showVerticalNav {
+    opacity: 0;
+  }
+  .hideVerticalNav {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hamburgerMenu {
+    display: none;
+  }
+  #menuToggle {
+    display: none;
+  }
+
+  #horizontalNav {
+    visibility: visible;
+  }
+
+  #horizontalNav ul {
+    width: 100%;
+  }
+
+  .nav-link {
+    font-family: 'Cinzel Decorative';
+    color: #C47F5E;
+    text-decoration: none;
+    font-size: 35px;
+  }
+  .nav-link:hover, .nav-link:focus, .nav-link-hovered {
+    color:#FFFEFE;
+  }
+  .verticalNavListFocused, .verticalNavList li:hover {
+    background-color: #656F60;
+  }
+}

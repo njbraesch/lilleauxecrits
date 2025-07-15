@@ -1,0 +1,27 @@
+{{ with $file := .Get 0 }}
+  {{ with resources.Get $file }}
+    {{ with . | transform.Unmarshal }}
+      <div class="members-list-container">
+        {{range . }}
+        <div class="members-list-item flex flex-col md:flex-row p-1 items-start md:items-center">
+          {{ with $picUrl := index . 0 }}
+            {{ with $picFullUrl := print "pics/" $picUrl}}
+              {{ with $pic := resources.Get $picFullUrl }}
+                  <img src="{{ $pic.RelPermalink }}">
+              {{ else }}
+                <p>{{ $picUrl }}</p>
+              {{ end }}
+            {{ end }}
+            
+          {{ end }}
+          <p>{{ index . 1 }}</p>
+        </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ else }}
+    {{ errorf "The %q shortcode was unable to find %s. See %s" $.Name $file $.Position }}
+  {{ end }}
+{{ else }}
+  {{ errorf "The %q shortcode requires one positional argument, the path to the CSV file relative to the assets directory. See %s" .Name .Position }}
+{{ end }}
