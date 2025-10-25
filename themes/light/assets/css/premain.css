@@ -49,6 +49,13 @@ h2 {
   font-size: 20px;
 }
 
+h3 {
+  color: #AEA550;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight:700;
+}
+
 header {
   margin-bottom: 1rem;
 }
@@ -61,12 +68,6 @@ footer {
 .nav-link {
   color: #FFFEFE;
   text-decoration: none;
-}
-
-.members-list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
 }
 
 .members-list-item > img {
@@ -124,7 +125,7 @@ footer {
   transition: background-color 0.5s;
 }
 
-.verticalNavListFocused, .verticalNavList li:hover {
+.navListFocused, .verticalNavList li:hover {
   background-color: #aea550;
 }
 
@@ -162,7 +163,7 @@ footer {
   .nav-link:hover, .nav-link:focus, .nav-link-hovered {
     color:#FFFEFE;
   }
-  .verticalNavListFocused, .verticalNavList li:hover {
+  .navListFocused, .verticalNavList li:hover {
     background-color: #656F60;
   }
 }
