@@ -14,13 +14,18 @@ title = 'My New Hugo Site'
     weight = 20
 
   [[menus.main]]
-    name = 'Nos membres'
-    pageRef = '/membres'
+    name = 'Nous contacter'
+    pageRef = '/contacts'
     weight = 30
 
   [[menus.main]]
-    name = 'Autour de nous'
-    pageRef = '/autour'
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 30
+    
+  [[menus.main]]
+    name = 'Nos partenaires'
+    pageRef = '/partenaires'
     weight = 30
 
 [module]

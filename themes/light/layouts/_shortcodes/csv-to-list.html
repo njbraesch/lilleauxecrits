@@ -1,7 +1,7 @@
 {{ with $file := .Get 0 }}
   {{ with resources.Get $file }}
     {{ with . | transform.Unmarshal }}
-      <div class="members-list-container flex flex-col gap-6 md:gap-10 py-20">
+      <div class="members-list-container flex flex-col gap-6 md:gap-10">
         {{range . }}
         <div class="members-list-item flex flex-col md:flex-row p-1 items-start gap-8">
           {{ with $picUrl := index . 0 }}

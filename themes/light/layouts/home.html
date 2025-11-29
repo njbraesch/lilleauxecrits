@@ -2,4 +2,5 @@
 <div class="lg:px-16 py-3">
   {{ .Content }}
 </div>
+{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}
