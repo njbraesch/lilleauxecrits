@@ -176,6 +176,9 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
   }
@@ -218,9 +221,6 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
-  .gap-10 {
-    gap: calc(var(--spacing) * 10);
-  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -233,12 +233,6 @@
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
-  }
-  .py-20 {
-    padding-block: calc(var(--spacing) * 20);
-  }
-  .pt-8 {
-    padding-top: calc(var(--spacing) * 8);
   }
   .no-underline {
     text-decoration-line: none;
@@ -287,6 +281,16 @@
       display: flex;
     }
   }
+  .lg\:max-w-9\/10 {
+    @media (width >= 64rem) {
+      max-width: calc(9/10 * 100%);
+    }
+  }
+  .lg\:grid-cols-2 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .lg\:flex-col {
     @media (width >= 64rem) {
       flex-direction: column;
@@ -310,6 +314,16 @@
   .lg\:px-16 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:px-24 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 24);
+    }
+  }
+  .lg\:px-32 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 32);
     }
   }
 }
@@ -341,8 +355,8 @@ h1 {
 h2 {
   font-family: 'Cinzel Bold';
   color: #AEA550;
-  margin: 0.5em 0;
-  font-size: 20px;
+  margin: 1em 0 1em 0;
+  font-size: 30px;
 }
 h3 {
   color: #AEA550;
@@ -404,6 +418,9 @@ footer {
   padding: 1rem;
   border-radius: 1em;
   transition: background-color 0.5s;
+  &.active {
+    background-color: #C47F5E;
+  }
 }
 .navListFocused, .verticalNavList li:hover {
   background-color: #aea550;
@@ -434,6 +451,9 @@ footer {
     color: #C47F5E;
     text-decoration: none;
     font-size: 35px;
+    &.active {
+      color: #FFFEFE;
+    }
   }
   .nav-link:hover, .nav-link:focus, .nav-link-hovered {
     color: #FFFEFE;

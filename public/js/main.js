@@ -17,12 +17,12 @@
   };
   var handleFocus = (e) => {
     if (e.currentTarget.parentElement) {
-      e.currentTarget.parentElement.classList.add("verticalNavListFocused");
+      e.currentTarget.parentElement.classList.add("navListFocused");
     }
   };
   var handleBlur = (e) => {
     if (e.currentTarget.parentElement) {
-      e.currentTarget.parentElement.classList.remove("verticalNavListFocused");
+      e.currentTarget.parentElement.classList.remove("navListFocused");
     }
   };
   var handleMenuExit = (e) => {
@@ -42,7 +42,12 @@
     item.addEventListener("blur", handleBlur);
   });
   hListLines.forEach((item) => {
-    item.addEventListener("mouseover", (e) => e.currentTarget.firstElementChild.classList.add("nav-link-hovered"));
+    item.addEventListener(
+      "mouseover",
+      (e) => {
+        e.currentTarget.firstElementChild.classList.add("nav-link-hovered");
+      }
+    );
     item.addEventListener("mouseleave", (e) => e.currentTarget.firstElementChild.classList.remove("nav-link-hovered"));
   });
   window.addEventListener("keyup", (e) => {

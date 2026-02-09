@@ -1,6 +1,19 @@
 {{ define "main" }}
-<div class="lg:px-16 py-3">
-  {{ .Content }}
+<div class="lg:px-32 py-3">
+  <div>
+    {{ .Content }}
+  </div>
+  <div class="grid lg:grid-cols-2">
+    <div>
+      {{ partial "agenda.html" }}
+    </div>
+    <div>
+      {{ partial "blogPreview.html" }}
+    </div>
+    <div>
+      {{ partial "podcast.html" }}
+    </div>
+  </div>
 </div>
 {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

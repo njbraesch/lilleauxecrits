@@ -5,7 +5,7 @@ title = 'My New Hugo Site'
 [menus]
   [[menus.main]]
     name = 'Qui sommes nous?'
-    pageRef = '/'
+    pageRef = '/membres'
     weight = 10
 
   [[menus.main]]
@@ -21,12 +21,12 @@ title = 'My New Hugo Site'
   [[menus.main]]
     name = 'Blog'
     pageRef = '/blog'
-    weight = 30
+    weight = 40
     
   [[menus.main]]
     name = 'Nos partenaires'
     pageRef = '/partenaires'
-    weight = 30
+    weight = 50
 
 [module]
   [module.hugoVersion]
