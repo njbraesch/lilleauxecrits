@@ -1,12 +1,10 @@
-{{- /*
-Renders a preview for the blog section's latest post
-*/}}
+<div class="p-5 border-1 rounded-sm">
+    <h2>Dernière publication du blog</h2>
 
-<div>
-    {{ define "main" }}
-        {{ with (index (where site.RegularPages "Type" "posts").ByDate.Reverse 0) }}
-            <h1>{{ .Title }}</h1>
-            {{ .Content }}
-        {{ end }}
-    {{ end }}
+{{ range first 1 site.RegularPages.ByDate.Reverse }}
+  <p class="underline">{{ .Title }}</p>
+  {{ .Content | strings.Truncate 100 }}
+    <a href="{{ .RelPermalink }}">Lire le post</a>
+  
+{{ end }}
 </div>

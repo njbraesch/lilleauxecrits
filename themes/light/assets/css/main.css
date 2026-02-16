@@ -9,6 +9,7 @@
       "Courier New", monospace;
     --color-black: #000;
     --spacing: 0.25rem;
+    --radius-sm: 0.25rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -221,7 +222,14 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .rounded-sm {
+    border-radius: var(--radius-sm);
+  }
   .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
@@ -230,6 +238,12 @@
   }
   .p-1 {
     padding: calc(var(--spacing) * 1);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
