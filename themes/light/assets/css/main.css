@@ -198,6 +198,9 @@
   .resize {
     resize: both;
   }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -212,6 +215,9 @@
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -242,9 +248,6 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
-  .p-10 {
-    padding: calc(var(--spacing) * 10);
-  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
@@ -270,9 +273,19 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .last-of-type\:hidden {
+    &:last-of-type {
+      display: none;
+    }
+  }
   .md\:m-8 {
     @media (width >= 48rem) {
       margin: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:grid-cols-4 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .md\:flex-row {
@@ -283,6 +296,11 @@
   .md\:gap-10 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:gap-20 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 20);
     }
   }
   .md\:pt-8 {
@@ -313,6 +331,11 @@
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
+    }
+  }
+  .lg\:items-start {
+    @media (width >= 64rem) {
+      align-items: flex-start;
     }
   }
   .lg\:items-stretch {
@@ -370,13 +393,13 @@ h2 {
   font-family: 'Cinzel Bold';
   color: #AEA550;
   margin: 1em 0 1em 0;
-  font-size: 30px;
+  font-size: 25px;
 }
 h3 {
-  color: #AEA550;
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 700;
+  text-decoration: underline;
 }
 header {
   margin-bottom: 1rem;
@@ -400,7 +423,7 @@ footer {
 }
 #hamburgerMenu:focus, #hamburgerMenu:hover {
   background-color: #aea550;
-  border: 2px solid #656F60;
+  outline: 2px solid #656F60;
 }
 .navButton {
   position: relative;
@@ -448,6 +471,9 @@ footer {
   }
 }
 @media (min-width: 1024px) {
+  h2 {
+    font-size: 36px;
+  }
   #hamburgerMenu {
     display: none;
   }

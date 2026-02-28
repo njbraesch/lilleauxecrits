@@ -1,9 +1,9 @@
 {{ with $file := .Get 0 }}
   {{ with resources.Get $file }}
     {{ with . | transform.Unmarshal }}
-      <div class="members-list-container flex flex-col gap-6 md:gap-10">
+      <div class="members-list-container grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-20">
         {{range . }}
-        <div class="members-list-item flex flex-col md:flex-row p-1 items-start gap-8">
+        <div class="members-list-item flex flex-col p-1 items-center lg:items-start">
           {{ with $picUrl := index . 0 }}
             {{ with $picFullUrl := print "pics/" $picUrl}}
               {{ with $pic := resources.Get $picFullUrl }}
@@ -14,7 +14,7 @@
             {{ end }}
             
           {{ end }}
-          <div class="flex flex-col md:pt-8 gap-4">
+          <div class="flex flex-col md:pt-8">
             <h3>{{ index . 1 }}</h3>
             <p>{{ index . 2 }}</p>
           </div>

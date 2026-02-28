@@ -4,4 +4,9 @@
 {{ range $pages }}
   <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   {{ .Content }}
+   <div class="members-list-separator flex justify-center last-of-type:hidden">
+    {{ with resources.Get "pics/sepateur_site_2.png" }}
+      <img src="{{ .RelPermalink}}" width="100px" height="100px">
+    {{ end }}
+  </div>
 {{ end }}

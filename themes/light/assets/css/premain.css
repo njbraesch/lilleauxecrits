@@ -46,14 +46,14 @@ h2 {
   font-family: 'Cinzel Bold';
   color: #AEA550;
   margin: 1em 0 1em 0;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 h3 {
-  color: #AEA550;
   font-size: 16px;
   font-family: sans-serif;
   font-weight:700;
+  text-decoration: underline;
 }
 
 header {
@@ -83,7 +83,7 @@ footer {
 
 #hamburgerMenu:focus, #hamburgerMenu:hover {
   background-color: #aea550;
-  border: 2px solid #656F60 ;
+  outline: 2px solid #656F60 ;
 }
 
 .navButton {
@@ -142,6 +142,10 @@ footer {
 }
 
 @media (min-width: 1024px) {
+
+  h2 {
+    font-size: 36px;
+  }
   #hamburgerMenu {
     display: none;
   }

@@ -1,8 +1,11 @@
 
 <div class="inline-flex lg:flex-col items-center lg:items-stretch">
     <h1>
-        {{ $image := resources.Get "pics/Banner_1919_x_250_px.png" }}
-        <img src="{{ $image.RelPermalink }}" alt="{{ site.Title}}" class="lg:max-w-9/10">
+        <a href="{{ .Site.Home.RelPermalink }}">
+            {{ $image := resources.Get "pics/Banner_1919_x_250_px.png" }}
+            <img src="{{ $image.RelPermalink }}" alt="{{ site.Title}}" class="lg:max-w-9/10">
+        </a>
+        
     </h1>
     <button id="hamburgerMenu" class="navButton" aria-label="Navigation menu" aria-expanded="false" aria-controls="verticalNav">
         <svg width="24px" height="24px" stroke="#656f60" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
