@@ -3,16 +3,14 @@
   <div>
     {{ .Content }}
   </div>
-  <div class="grid lg:grid-cols-2">
-    <div>
-      {{ partial "agenda.html" }}
-    </div>
-    <div>
-      {{ partial "blogPreview.html" }}
-    </div>
-    <div>
-      {{ partial "podcast.html" }}
-    </div>
+  <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-4">
+    
+    {{ partial "agenda.html" }}
+    
+    {{ partial "blogPreview.html" }}
+    
+    {{ partial "podcast.html" }}
+    
   </div>
 </div>
 {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
